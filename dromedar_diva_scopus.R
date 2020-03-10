@@ -1,7 +1,7 @@
 ## Relies on ScopusAPI.R function by Christopher Belter
 ## The rest is coded by Anders Wändahl aw@kth.se
 
-##setwd("C:/Users/aw/R/scopus_api/Dromedar")## my KTH-laptop at work -- set your own working directory
+##setwd("C:/Users/aw/R/scopus_api/Dromedar") ## my KTH-laptop at work -- set your own working directory
 ##setwd("~/GitHub/Dromedar")  ## my Old_HP at home -- set your own working directory
 
 library(httr) ## needed for Scopus search
@@ -18,8 +18,8 @@ Sys.sleep(3) ## seems like function ScopusAPI.R doesn't load properly before the
 ## No more than 9999 records can be exported at the same time.
 
 ## diva_url <- 'https://uu.diva-portal.org/smash/export.jsf?format=csv&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2019","to":"2020"}},{"publicationTypeCode":["review","article","conferencePaper"]}]]&onlyFullText=false&noOfRows=500&sortOrder=title_sort_asc&sortOrder2=title_sort_asc&csvType=publication&fl=PID,DOI,ISI,PMID,ScopusId,Year'
-## diva_url <- 'https://kth.diva-portal.org/smash/export.jsf?format=csv&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2017","to":"2018"}},{"publicationTypeCode":["bookReview","review","article","chapter"]}]]&onlyFullText=false&noOfRows=50&sortOrder=title_sort_asc&sortOrder2=title_sort_asc&csvType=publication&fl=PID,DOI,ISI,PMID,ScopusId,Year'
-diva_url <- 'https://liu.diva-portal.org/smash/export.jsf?format=csvall&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2014","to":"2014"}},{"publicationTypeCode":["review","article","conferencePaper"]}]]&onlyFullText=false&noOfRows=500&sortOrder=title_sort_asc&sortOrder2=title_sort_asc'
+diva_url <- 'https://kth.diva-portal.org/smash/export.jsf?format=csv&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2017","to":"2018"}},{"publicationTypeCode":["bookReview","review","article","chapter"]}]]&onlyFullText=false&noOfRows=50&sortOrder=title_sort_asc&sortOrder2=title_sort_asc&csvType=publication&fl=PID,DOI,ISI,PMID,ScopusId,Year'
+## diva_url <- 'https://liu.diva-portal.org/smash/export.jsf?format=csvall&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2014","to":"2014"}},{"publicationTypeCode":["review","article","conferencePaper"]}]]&onlyFullText=false&noOfRows=500&sortOrder=title_sort_asc&sortOrder2=title_sort_asc'
 ## diva_url <- 'https://kau.diva-portal.org/smash/export.jsf?format=csvall&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2014","to":"2014"}},{"publicationTypeCode":["review","article","conferencePaper"]}]]&onlyFullText=false&noOfRows=9999&sortOrder=title_sort_asc&sortOrder2=title_sort_asc'
 ## diva_url <- 'https://his.diva-portal.org/smash/export.jsf?format=csv&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2018","to":"2018"}},{"publicationTypeCode":["review","article","conferencePaper"]}]]&onlyFullText=false&noOfRows=9999&sortOrder=title_sort_asc&sortOrder2=title_sort_asc&csvType=publication&fl=PID,DOI,ISI,PMID,ScopusId,Year'
 ## diva_url <- 'https://sh.diva-portal.org/smash/export.jsf?format=csv&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2000","to":"2020"}},{"publicationTypeCode":["review","article","conferencePaper"]}]]&onlyFullText=false&noOfRows=9999&sortOrder=title_sort_asc&sortOrder2=title_sort_asc&csvType=publication&fl=PID,DOI,ISI,PMID,ScopusId,Year'
