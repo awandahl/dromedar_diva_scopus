@@ -3,7 +3,7 @@ dromedar_diva_scopus is an R-script for getting publication data from DiVA, extr
 
 - Install libraries httr, xml and readr
 - Put files Dromedar_diva_scopus.R, scopusAPI.R and split_csv.R in the same directory
-- Edit the "diva_url" parameter to your liking. This url is initially made by doing a "create feed"/"utsökning" in the DiVA web interface. You should probably change the beginning of the url to your institution, change the years and number of publications you want. You can retrieve a maximum of 9999 publications which in many cases means that you have to limit your search to one year at a time, if you have a fairly large production of publications.
+- Edit the "diva_url" parameter to your liking. This url is initially made by doing a "create feed"/"utsökning" in the DiVA web interface. You should probably change the beginning of the url to your institution, change the years and number of publications you want. You can retrieve a maximum of 9999 publications which in many cases means that you have to limit your search to one year at a time if you have a fairly large production of publications.
 - Insert your Scopus API key at line 9 and 52 in scopusAPI.R
 - Run Dromedar_diva_scopus.R
 - You will see that the program fetches a csv-file from DiVA (according to your settings), then it will search the Scopus API (which may take some time), and finally the search results from Scopus are merged with what you have in the csv you just downloaded.
