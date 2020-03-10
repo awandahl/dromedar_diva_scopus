@@ -65,7 +65,6 @@ if(nrow(pmid_no_doi) != 0) {
   write.table(pmid_no_doi, 'pmids_missing_doi', row.names = FALSE, col.names=FALSE)  ## write table for Scopus search, row and column names.
 }
 
-
 ## Scopus searches goes here:
 ## looking for missing ScopusIds where we have DOIs in DiVA. Easy to forget what we are doing.
 
@@ -89,7 +88,6 @@ print('Searching for missing DOIs where we have ScopusIds in DiVA')
 Sys.sleep(2)
 
 ## looking for missing PMIDs where we have DOIs in DiVA. Easy to forget what we are doing.
-
 
 if(file.exists('dois_missing_pmid')) {
   theXML_pmid_doi <- searchByID(theIDs = "dois_missing_pmid", idtype = "doi", outfile = "test.xml") ## Search for PMIDs where DOIs are missing
