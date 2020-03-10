@@ -13,8 +13,6 @@ source("split_csv.R") ## function to split csv-files in chunks of 250
 Sys.sleep(3) ## seems like function ScopusAPI.R doesn't load properly before the rest of the code is executed
 
 ## Preprocessing of DiVA file, custom CSV with fields DOI, Scopus-ID, ISI, PMID
-## https://dev.elsevier.com/tips/ScopusSearchTips.htm
-
 
 ## Fetching CSV file from DiVA via httr/curl. Edit url, years, no of records and publication type. 
 ## No more than 9999 records can be exported at the same time.
@@ -69,7 +67,6 @@ if(nrow(pmid_no_doi) != 0) {
 
 
 ## Scopus searches goes here:
-
 ## looking for missing ScopusIds where we have DOIs in DiVA. Easy to forget what we are doing.
 
 if(file.exists('dois_missing_eid')) {
@@ -163,6 +160,6 @@ if(exists('result_doi_for_pmids')) {
   split_csv(new_dois_pmid) ## using function csv_split.R instead of above
 }
 
-## We may find some complaints about missing objects during the process. This is normal ;) 
-## And I know that this code could be much much smaller and more beautiful if I had refactored 
-## or if I had used Tidyverse or whatever. Rewriting is the next project which may never happen.
+## You may see some errors when running this code. Some of them may indicate that there is something wrong in your data (i.e. DiVA).
+## And some of them are due to bad coding by me. I know that this code could be much much smaller and more beautiful if I had refactored, 
+## or if I had used Tidyverse or whatever. A complete rewrite is not likely to happen, though.
