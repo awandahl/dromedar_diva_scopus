@@ -9,4 +9,4 @@ Dromedar_diva_scopus is an R-script for getting publication data from DiVA (http
 - Run dromedar_diva_scopus.R
 - You will see that the program fetches a csv-file from DiVA (according to your settings), then it will search the Scopus API for the missing identifiers (which may take four rounds and some time), and finally the search results from Scopus are merged with the csv you downloaded from DiVA in the first place.
 - In the best of worlds you will find up to four csv-files in the directory. They look like: file2_20200310_165056_.csv The number of files is of course depending on the number of identifiers that are missing in your DiVA. The files contain one column for the PID of your publication and another containing the new identifier. Each file is limited to 250 records, since this is the maximum number that can be safely inserted manually into the DiVA database. In order to prevent confusion I think it is a good habit to move these files out of the directory before you make a new run of the program.
-- Good luck and enjoy! I'm happy to answer any questions at aw@kth.se
+- Good luck and enjoy! I'm happy to answer any questions at aw (at) kth.se
