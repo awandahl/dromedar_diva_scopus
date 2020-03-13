@@ -1,4 +1,4 @@
-## version 0.4
+## version 0.4 by Christopher Belter https://github.com/christopherBelter/scopusAPI
 searchByString <- function(string, content = "complete", myStart = 0, retCount = 25, retMax = Inf, mySort = "-coverDate", cursor = "*", outfile) {
   if (!content %in% c("complete", "standard")) {
     stop("Invalid content value. Valid content values are 'complete', and 'standard'")
