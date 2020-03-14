@@ -3,8 +3,8 @@
 split_csv <- function(infile) {
   
   infile$PID <- as.character(infile$PID) ## we want " " around the PIDs
-  id    <- names(infile[2]) ## extract the name of the second column of infile which is the type of identifier we are making csv:s for. We insert that information in the file name later.
-  size  <- 250 # DiVA can only handle 250 records at a time
+  id    <- names(infile[2]) ## extract the name of the second column of "infile" which is the type of identifier we are making csv:s for. We insert that information in the file name later.
+  size  <- 250 # DiVA-support can only manually upload 250 records at a time
   n     <- nrow(infile)  ## how many rows in infile?
   r     <- rep(1:ceiling(n/size),each=size)[1:n] ## how many parts?
   d     <- split(infile,r) ## split the infile in parts of 250
