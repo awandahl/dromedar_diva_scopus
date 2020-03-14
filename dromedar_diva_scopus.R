@@ -24,7 +24,7 @@ diva_url <- 'https://kth.diva-portal.org/smash/export.jsf?format=csv&addFilename
 ## diva_url <- 'https://his.diva-portal.org/smash/export.jsf?format=csv&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2018","to":"2018"}},{"publicationTypeCode":["review","article","conferencePaper"]}]]&onlyFullText=false&noOfRows=9999&sortOrder=title_sort_asc&sortOrder2=title_sort_asc&csvType=publication&fl=PID,DOI,ISI,PMID,ScopusId,Year'
 ## diva_url <- 'https://sh.diva-portal.org/smash/export.jsf?format=csv&addFilename=true&aq=[[]]&aqe=[]&aq2=[[{"dateIssued":{"from":"2000","to":"2020"}},{"publicationTypeCode":["review","article","conferencePaper"]}]]&onlyFullText=false&noOfRows=9999&sortOrder=title_sort_asc&sortOrder2=title_sort_asc&csvType=publication&fl=PID,DOI,ISI,PMID,ScopusId,Year'
 
-GET(diva_url, write_disk("export.csv", overwrite=TRUE)) ## write the csv to disk
+GET(diva_url, write_disk("export.csv", overwrite=TRUE)) ## get the records from DiVA and write to a csv on disk
 
 ## Import from DiVA: CSV with fields DOI, Scopus-ID, ISI, PMID. Hopefully the ISI could be added later as an identifier to update
 df_from_diva <- read_csv('export.csv', col_types = cols())  ### read export file from DiVA, read_csv *from readr package* NOT read.csv. 'col_types = cols()' surpress noise from read_csv.
