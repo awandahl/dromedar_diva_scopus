@@ -1,3 +1,4 @@
+## dromedar_diva_scopus 1.00
 ## Relies on ScopusAPI.R function by Christopher Belter
 ## The rest is coded by Anders Wändahl aw (at) kth.se
 
