@@ -156,5 +156,5 @@ if(exists('result_doi_for_pmids')) { ## checking if there is a dataframe to work
 }
 
 ## You may see some errors when running this code. Some of them may indicate that there is something wrong in your data (i.e. DiVA).
-## And some of them are due to bad coding by me. I know that this code could be much much smaller and more beautiful if I had refactored, 
-## or if I had used Tidyverse or whatever. A complete rewrite is not likely to happen, though.
+## And some of errors are due to bad coding by me. I know that this code could be much much smaller and more beautiful if I had refactored, 
+## or if I had used Tidyverse or whatever. A complete rewrite is not likely to happen, though. If it ain't broke, don't fix it!
