@@ -116,7 +116,7 @@ if(exists('result_eid_for_dois')) { ## checking if there is a dataframe to work 
   new_eids <- new_eids[!is.na(new_eids$scopusID),]  ##  subset rows with a 'scopusID' i.e. remove all NAs
   names(new_eids)[names(new_eids) == "scopusID"] <- "ScopusId" ## rename the column 'scopusID' to what it is called in DiVA ('ScopusId')
   ## write.csv(new_eids, file='export_files/new_eids_for_dois_in_diva.csv', row.names=FALSE) ## save a CSV file that easily could be imported to DiVA
-  split_csv(new_eids) ## using function csv_split.R instead of above. We want files with a maximum of 250 records. If you want a single file, us the line above
+  split_csv(new_eids) ## using function csv_split.R instead of above. We want files with a maximum of 250 records. If you want a single file, use the line above
   
 }
 
@@ -128,7 +128,7 @@ if(exists('result_pmid_for_dois')) { ## checking if there is a dataframe to work
   new_pmids <- new_pmids[!is.na(new_pmids$pmid),]  ##  subset rows with a 'pmid' i.e. remove all NAs
   names(new_pmids)[names(new_pmids) == "pmid"] <- "PMID" ## rename the column 'pmid' to what it is called in DiVA ('PMID')
   ## write.csv(new_pmids, file='export_files/new_pmids_for_dois_in_diva.csv', row.names=FALSE) ## save a CSV file that easily could be imported to DiVA
-  split_csv(new_pmids) ## using function csv_split.R instead of above. We want files with a maximum of 250 records. If you want a single file, us the line above
+  split_csv(new_pmids) ## using function csv_split.R instead of above. We want files with a maximum of 250 records. If you want a single file, use the line above
   
 }
 
@@ -140,7 +140,7 @@ if(exists('result_doi_for_eids')) { ## checking if there is a dataframe to work 
   new_dois <- new_dois[!is.na(new_dois$doi),]  ##  subset rows with a 'doi' i.e. remove all NAs
   names(new_dois)[names(new_dois) == "doi"] <- "DOI" ## rename the column 'doi' to what it is called in DiVA ('DOI')
   ## write.csv(new_dois, file='export_files/new_dois_for_eids_in_diva.csv', row.names=FALSE) ## save a CSV file that easily could be imported to DiVA
-  split_csv(new_dois) ## using function csv_split.R instead of above. We want files with a maximum of 250 records. If you want a single file, us the line above
+  split_csv(new_dois) ## using function csv_split.R instead of above. We want files with a maximum of 250 records. If you want a single file, use the line above
   
 }
 
@@ -152,7 +152,7 @@ if(exists('result_doi_for_pmids')) { ## checking if there is a dataframe to work
   new_dois_pmid <- new_dois_pmid[!is.na(new_dois_pmid$doi),]  ##  subset rows with a 'doi' i.e. remove all NAs
   names(new_dois_pmid)[names(new_dois_pmid) == "doi"] <- "DOI" ## rename the column 'doi' to what it is called in DiVA ('DOI')
   ##  write.csv(new_dois_pmid, file='export_files/new_dois_for_pmids_in_diva.csv', row.names=FALSE) ## save a CSV file that easily could be imported to DiVA
-  split_csv(new_dois_pmid) ## using function csv_split.R instead of above. We want files with a maximum of 250 records. If you want a single file, us the line above
+  split_csv(new_dois_pmid) ## using function csv_split.R instead of above. We want files with a maximum of 250 records. If you want a single file, use the line above
 }
 
 ## You may see some errors when running this code. Some of them may indicate that there is something wrong in your data (i.e. DiVA).
