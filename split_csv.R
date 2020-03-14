@@ -1,3 +1,4 @@
+## split_csv 1.00
 ## https://stackoverflow.com/questions/39935649/r-code-to-split-big-table-into-smaller-txt-files-and-save-to-computer
 
 split_csv <- function(infile) {
